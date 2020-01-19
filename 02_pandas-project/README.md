@@ -33,6 +33,8 @@ The following is included in my project02 Github repo for this chapter.
 
 * ** load dataset
 
+* ** Check the dateset and validate the content
+
 * ** drop unneeded columns
 
 * ** change columns names to proper names
