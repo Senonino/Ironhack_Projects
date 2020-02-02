@@ -42,9 +42,8 @@ The repository is set up as follows:
 
 
 ### Output folder:
-[Merging, Analysis and Plotting](https://github.com/valsophie/group_project-/blob/master/Analysis%20Airbnb%20vs%20hotels%20Berlin%20-%20Plotting%20and%20descriptive%20Statistics.ipynb)
 
-[Readme](https://github.com/valsophie/group_project-/blob/master/README.md)
+[Readme](https://github.com/Senonino/Ironhack_projects/tree/master/Module02_tableau-project)
 
 ### Subfolder with following content:
 ##### 1. Data cleaner: 
