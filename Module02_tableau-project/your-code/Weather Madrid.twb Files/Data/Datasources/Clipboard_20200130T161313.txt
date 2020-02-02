@@ -1,0 +1,6 @@
+0/8 	= clear skies
+1-2/8 	= fair
+3/8 	= lightly clouded
+4-6/8 	= cloudy
+7/8 	= very cloudy
+8/8 	= overcast
