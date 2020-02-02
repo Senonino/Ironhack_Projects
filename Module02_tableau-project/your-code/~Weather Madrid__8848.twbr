@@ -1,0 +1,2283 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.20.0119.2058                               -->
+<workbook source-build='2019.4.2 (20194.20.0119.2058)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='modern' />
+  <datasources>
+    <datasource inline='true' name='Clipboard_20200130T161313' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Clipboard_20200130T161313' name='Clipboard_20200130T161313leaf'>
+            <connection class='textscan' directory='D:/Ironhack/Ironhack_Projects/Module02_tableau-project/your-code/Weather Madrid.twb Files/Data/Datasources' filename='Clipboard_20200130T161313.txt' />
+          </named-connection>
+        </named-connections>
+        <relation connection='Clipboard_20200130T161313leaf' name='Clipboard_20200130T161313#txt' table='[Clipboard_20200130T161313#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='0/8 _= clear skies' ordinal='0' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Clipboard_20200130T161313#txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>0/8 _= clear skies</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[0/8 _= clear skies]</local-name>
+            <parent-name>[Clipboard_20200130T161313#txt]</parent-name>
+            <remote-alias>0/8 _= clear skies</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='0/8  = Clear Skies' datatype='string' name='[0/8 _= clear skies]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.5' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Germany&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='Weather_Madrid_clean' inline='true' name='federated.042k2lc1vp6i8m1bc3k2i1o7a85r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Weather_Madrid_clean' name='textscan.16z57yd1u02uj01btrkgb1qa1dnx'>
+            <connection class='textscan' directory='D:/Ironhack/Ironhack_Projects/Module02_tableau-project/your-code/Data cleaner' filename='Weather_Madrid_clean.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.16z57yd1u02uj01btrkgb1qa1dnx' name='Weather_Madrid_clean.csv' table='[Weather_Madrid_clean#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='date' name='Date' ordinal='1' />
+            <column datatype='integer' name='Max TemperatureC' ordinal='2' />
+            <column datatype='integer' name='Mean TemperatureC' ordinal='3' />
+            <column datatype='integer' name='Min TemperatureC' ordinal='4' />
+            <column datatype='integer' name='Dew PointC' ordinal='5' />
+            <column datatype='integer' name='MeanDew PointC' ordinal='6' />
+            <column datatype='integer' name='Min DewpointC' ordinal='7' />
+            <column datatype='integer' name='Max Humidity' ordinal='8' />
+            <column datatype='integer' name='Mean Humidity' ordinal='9' />
+            <column datatype='integer' name='Min Humidity' ordinal='10' />
+            <column datatype='integer' name='Max Sea Level PressurehPa' ordinal='11' />
+            <column datatype='integer' name='Mean Sea Level PressurehPa' ordinal='12' />
+            <column datatype='integer' name='Min Sea Level PressurehPa' ordinal='13' />
+            <column datatype='integer' name='Max VisibilityKm' ordinal='14' />
+            <column datatype='integer' name='Mean VisibilityKm' ordinal='15' />
+            <column datatype='integer' name='Min VisibilitykM' ordinal='16' />
+            <column datatype='integer' name='Max Wind SpeedKm/h' ordinal='17' />
+            <column datatype='integer' name='Mean Wind SpeedKm/h' ordinal='18' />
+            <column datatype='integer' name='CloudCover' ordinal='19' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Max TemperatureC</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Max TemperatureC]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Max TemperatureC</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mean TemperatureC</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Mean TemperatureC]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Mean TemperatureC</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Min TemperatureC</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Min TemperatureC]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Min TemperatureC</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dew PointC</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Dew PointC]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Dew PointC</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MeanDew PointC</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MeanDew PointC]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>MeanDew PointC</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Min DewpointC</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Min DewpointC]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Min DewpointC</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Max Humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Max Humidity]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Max Humidity</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mean Humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Mean Humidity]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Mean Humidity</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Min Humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Min Humidity]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Min Humidity</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Max Sea Level PressurehPa</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Max Sea Level PressurehPa]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Max Sea Level PressurehPa</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mean Sea Level PressurehPa</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Mean Sea Level PressurehPa]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Mean Sea Level PressurehPa</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Min Sea Level PressurehPa</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Min Sea Level PressurehPa]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Min Sea Level PressurehPa</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Max VisibilityKm</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Max VisibilityKm]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Max VisibilityKm</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mean VisibilityKm</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Mean VisibilityKm]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Mean VisibilityKm</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Min VisibilitykM</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Min VisibilitykM]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Min VisibilitykM</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Max Wind SpeedKm/h</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Max Wind SpeedKm/h]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Max Wind SpeedKm/h</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mean Wind SpeedKm/h</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Mean Wind SpeedKm/h]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>Mean Wind SpeedKm/h</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CloudCover</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CloudCover]</local-name>
+            <parent-name>[Weather_Madrid_clean.csv]</parent-name>
+            <remote-alias>CloudCover</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Seasons' datatype='string' name='[Calculation_1054405277448695809]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF ((MONTH([Date])=12) or (MONTH([Date])=1) or (MONTH([Date])=2)) THEN &quot;Winter&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=3) or (MONTH([Date])=4) or (MONTH([Date])=5)) THEN &quot;Spring&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=6) or (MONTH([Date])=7) or (MONTH([Date])=8)) THEN &quot;Summer&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=9) or (MONTH([Date])=10) or (MONTH([Date])=11)) THEN &quot;Fall&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Cloud Cover' datatype='integer' name='[CloudCover]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Dew PointC]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[F1]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Max Humidity]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Max Sea Level PressurehPa]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Max TemperatureC]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Max VisibilityKm]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Max Wind SpeedKm/h]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Mean Humidity]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Mean Sea Level PressurehPa]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Mean TemperatureC]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Mean VisibilityKm]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Mean Wind SpeedKm/h]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[MeanDew PointC]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Min DewpointC]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Min Humidity]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Min Sea Level PressurehPa]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Min TemperatureC]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Min VisibilitykM]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column-instance column='[Max Humidity]' derivation='Attribute' name='[attr:Max Humidity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max TemperatureC]' derivation='Attribute' name='[attr:Max TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[CloudCover]' derivation='Avg' name='[avg:CloudCover:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Dew PointC]' derivation='Avg' name='[avg:Dew PointC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max Humidity]' derivation='Avg' name='[avg:Max Humidity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max Sea Level PressurehPa]' derivation='Avg' name='[avg:Max Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max TemperatureC]' derivation='Avg' name='[avg:Max TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max Wind SpeedKm/h]' derivation='Avg' name='[avg:Max Wind SpeedKm/h:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean Humidity]' derivation='Avg' name='[avg:Mean Humidity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean Sea Level PressurehPa]' derivation='Avg' name='[avg:Mean Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean TemperatureC]' derivation='Avg' name='[avg:Mean TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean Wind SpeedKm/h]' derivation='Avg' name='[avg:Mean Wind SpeedKm/h:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min DewpointC]' derivation='Avg' name='[avg:Min DewpointC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min Humidity]' derivation='Avg' name='[avg:Min Humidity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min Sea Level PressurehPa]' derivation='Avg' name='[avg:Min Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min TemperatureC]' derivation='Avg' name='[avg:Min TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max Humidity]' derivation='Avg' forecast-column-base='[avg:Max Humidity:qk]' forecast-column-type='forecast-value' name='[fVal:avg:Max Humidity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max TemperatureC]' derivation='Avg' forecast-column-base='[avg:Max TemperatureC:qk]' forecast-column-type='forecast-value' name='[fVal:avg:Max TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean Humidity]' derivation='Avg' forecast-column-base='[avg:Mean Humidity:qk]' forecast-column-type='forecast-value' name='[fVal:avg:Mean Humidity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min TemperatureC]' derivation='Avg' forecast-column-base='[avg:Min TemperatureC:qk]' forecast-column-type='forecast-value' name='[fVal:avg:Min TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Dew PointC]' derivation='Median' name='[med:Dew PointC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max Sea Level PressurehPa]' derivation='Median' name='[med:Max Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max TemperatureC]' derivation='Median' name='[med:Max TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean TemperatureC]' derivation='Median' name='[med:Mean TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min Sea Level PressurehPa]' derivation='Median' name='[med:Min Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min TemperatureC]' derivation='Median' name='[med:Min TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number of Records]' derivation='Median' name='[med:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Max Humidity]' derivation='None' name='[none:Max Humidity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max TemperatureC]' derivation='None' name='[none:Max TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[CloudCover]' derivation='Sum' name='[sum:CloudCover:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Dew PointC]' derivation='Sum' name='[sum:Dew PointC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[F1]' derivation='Sum' name='[sum:F1:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max Humidity]' derivation='Sum' name='[sum:Max Humidity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max Sea Level PressurehPa]' derivation='Sum' name='[sum:Max Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max TemperatureC]' derivation='Sum' name='[sum:Max TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max VisibilityKm]' derivation='Sum' name='[sum:Max VisibilityKm:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max Wind SpeedKm/h]' derivation='Sum' name='[sum:Max Wind SpeedKm/h:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean Humidity]' derivation='Sum' name='[sum:Mean Humidity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean Sea Level PressurehPa]' derivation='Sum' name='[sum:Mean Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean TemperatureC]' derivation='Sum' name='[sum:Mean TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean VisibilityKm]' derivation='Sum' name='[sum:Mean VisibilityKm:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mean Wind SpeedKm/h]' derivation='Sum' name='[sum:Mean Wind SpeedKm/h:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MeanDew PointC]' derivation='Sum' name='[sum:MeanDew PointC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min DewpointC]' derivation='Sum' name='[sum:Min DewpointC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min Humidity]' derivation='Sum' name='[sum:Min Humidity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min Sea Level PressurehPa]' derivation='Sum' name='[sum:Min Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min TemperatureC]' derivation='Sum' name='[sum:Min TemperatureC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Min VisibilitykM]' derivation='Sum' name='[sum:Min VisibilitykM:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='D:/Ironhack/Ironhack_Projects/Module02_tableau-project/your-code/Weather Madrid.twb Files/Data/your-code/Weather_Madrid_extract.hyper' default-settings='yes' schema='Extract' sslmode='' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5439</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>5439</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Max TemperatureC</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Max TemperatureC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Max TemperatureC</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>38</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mean TemperatureC</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Mean TemperatureC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mean TemperatureC</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Min TemperatureC</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Min TemperatureC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Min TemperatureC</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Dew PointC</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Dew PointC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Dew PointC</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MeanDew PointC</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[MeanDew PointC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MeanDew PointC</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Min DewpointC</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Min DewpointC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Min DewpointC</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>36</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Max Humidity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Max Humidity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Max Humidity</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mean Humidity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Mean Humidity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mean Humidity</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Min Humidity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Min Humidity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Min Humidity</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Max Sea Level PressurehPa</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Max Sea Level PressurehPa]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Max Sea Level PressurehPa</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mean Sea Level PressurehPa</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Mean Sea Level PressurehPa]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mean Sea Level PressurehPa</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Min Sea Level PressurehPa</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Min Sea Level PressurehPa]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Min Sea Level PressurehPa</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>49</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Max VisibilityKm</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Max VisibilityKm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Max VisibilityKm</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mean VisibilityKm</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Mean VisibilityKm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mean VisibilityKm</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Min VisibilitykM</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Min VisibilitykM]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Min VisibilitykM</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Max Wind SpeedKm/h</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Max Wind SpeedKm/h]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Max Wind SpeedKm/h</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mean Wind SpeedKm/h</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Mean Wind SpeedKm/h]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mean Wind SpeedKm/h</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CloudCover</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[CloudCover]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CloudCover</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Weather_Madrid_clean.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.135965' measure-ordering='alphabetic' measure-percentage='0.864035' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#008dd4'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Min TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#00aa7f'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Mean Humidity:qk]&quot;</bucket>
+            </map>
+            <map to='#00aaff'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[attr:Max Humidity:qk]&quot;</bucket>
+            </map>
+            <map to='#00aaff'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]&quot;</bucket>
+            </map>
+            <map to='#00aaff'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Max Humidity:qk]&quot;</bucket>
+            </map>
+            <map to='#00aaff'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Max Humidity:qk]&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk]&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean Humidity:qk]&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[attr:Max VisibilityKm:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:CloudCover:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Sea Level PressurehPa:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Wind SpeedKm/h:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean VisibilityKm:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:CloudCover:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Dew PointC:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Max Sea Level PressurehPa:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Max Wind SpeedKm/h:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Mean VisibilityKm:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:CloudCover:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Dew PointC:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Max Sea Level PressurehPa:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Max VisibilityKm:qk]&quot;</bucket>
+            </map>
+            <map to='#50a000'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#50a000'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Mean TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max VisibilityKm:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Max VisibilityKm:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Min TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Mean Wind SpeedKm/h:qk]&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[attr:Min VisibilitykM:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min DewpointC:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Sea Level PressurehPa:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min VisibilitykM:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Min DewpointC:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Min Sea Level PressurehPa:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Min VisibilitykM:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Mean TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Min DewpointC:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Min Sea Level PressurehPa:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Min VisibilitykM:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Max Wind SpeedKm/h:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[attr:Mean VisibilityKm:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean Sea Level PressurehPa:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean Wind SpeedKm/h:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:MeanDew PointC:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Mean Sea Level PressurehPa:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Mean Wind SpeedKm/h:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:MeanDew PointC:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:F1:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Max TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Mean Sea Level PressurehPa:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Mean VisibilityKm:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:MeanDew PointC:qk]&quot;</bucket>
+            </map>
+            <map to='#f53a3a'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[attr:Max TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#f53a3a'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#f53a3a'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[med:Max TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#f53a3a'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Max TemperatureC:qk]&quot;</bucket>
+            </map>
+            <map to='#ffff00'>
+              <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Min Humidity:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]&#10;[none:Forecast Indicator:nk]' type='palette'>
+            <map to='#1f77b4'>
+              <multibucket>
+                <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[fVal:avg:Max Humidity:qk]&quot;</bucket>
+                <bucket>&quot;Actual&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#2ca02c'>
+              <multibucket>
+                <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[fVal:avg:Mean Humidity:qk]&quot;</bucket>
+                <bucket>&quot;Actual&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#4e79a7'>
+              <multibucket>
+                <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[fVal:avg:Min TemperatureC:qk]&quot;</bucket>
+                <bucket>&quot;Actual&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#76b7b2'>
+              <multibucket>
+                <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[fVal:avg:Min TemperatureC:qk]&quot;</bucket>
+                <bucket>&quot;Estimate&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#d62728'>
+              <multibucket>
+                <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[fVal:avg:Mean Humidity:qk]&quot;</bucket>
+                <bucket>&quot;Estimate&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#e15759'>
+              <multibucket>
+                <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[fVal:avg:Max TemperatureC:qk]&quot;</bucket>
+                <bucket>&quot;Actual&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#f28e2b'>
+              <multibucket>
+                <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[fVal:avg:Max TemperatureC:qk]&quot;</bucket>
+                <bucket>&quot;Estimate&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#ff7f0e'>
+              <multibucket>
+                <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[fVal:avg:Max Humidity:qk]&quot;</bucket>
+                <bucket>&quot;Estimate&quot;</bucket>
+              </multibucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Forecast Indicator:nk]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;Actual&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;Estimate&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Germany&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Cloud Cover'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Weather_Madrid_clean' name='federated.042k2lc1vp6i8m1bc3k2i1o7a85r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.042k2lc1vp6i8m1bc3k2i1o7a85r'>
+            <column caption='Seasons' datatype='string' name='[Calculation_1054405277448695809]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ((MONTH([Date])=12) or (MONTH([Date])=1) or (MONTH([Date])=2)) THEN &quot;Winter&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=3) or (MONTH([Date])=4) or (MONTH([Date])=5)) THEN &quot;Spring&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=6) or (MONTH([Date])=7) or (MONTH([Date])=8)) THEN &quot;Summer&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=9) or (MONTH([Date])=10) or (MONTH([Date])=11)) THEN &quot;Fall&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Cloud Cover' datatype='integer' name='[CloudCover]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[CloudCover]' derivation='Avg' name='[avg:CloudCover:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1054405277448695809]' derivation='None' name='[none:Calculation_1054405277448695809:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Quarter-Trunc' name='[tqr:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year-Trunc' name='[tyr:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='Year-Trunc' name='[tyr:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:CloudCover:qk]' included-values='in-range'>
+            <min>1.3793103448275863</min>
+            <max>4.4555555555555557</max>
+          </filter>
+          <slices>
+            <column>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:CloudCover:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:CloudCover:qk]' scope='rows' value='Cloud Cover' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tyr:Date:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tqr:Date:qk]' num-steps='18' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#cfcfcf</color>
+                <color>#bac6cb</color>
+                <color>#a6bec8</color>
+                <color>#93b6c4</color>
+                <color>#81aec1</color>
+                <color>#6ea6be</color>
+                <color>#5d9eba</color>
+                <color>#4c97b7</color>
+                <color>#3c90b3</color>
+                <color>#2c88b0</color>
+                <color>#1d82ad</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tyr:Date:qk]' num-steps='18' reverse='true' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#cfcfcf</color>
+                <color>#bac6cb</color>
+                <color>#a6bec8</color>
+                <color>#93b6c4</color>
+                <color>#81aec1</color>
+                <color>#6ea6be</color>
+                <color>#5d9eba</color>
+                <color>#4c97b7</color>
+                <color>#3c90b3</color>
+                <color>#2c88b0</color>
+                <color>#1d82ad</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tqr:Date:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:CloudCover:qk]</rows>
+        <cols>([federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Calculation_1054405277448695809:nk] * [federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tyr:Date:qk])</cols>
+        <pages>
+          <column>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tyr:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-color='#a0cbe8' mark-type='all' />
+      </table>
+      <simple-id uuid='{74E3ED52-D8F5-4840-9B0E-4DF8CD278847}' />
+    </worksheet>
+    <worksheet name='Cloud Cover Measures'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Cloud Cover Measures</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name='Clipboard_20200130T161313' />
+          </datasources>
+          <datasource-dependencies datasource='Clipboard_20200130T161313'>
+            <column caption='0/8  = Clear Skies' datatype='string' name='[0/8 _= clear skies]' role='dimension' type='nominal' />
+            <column-instance column='[0/8 _= clear skies]' derivation='None' name='[none:0/8 _= clear skies:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <natural-sort column='[Clipboard_20200130T161313].[none:0/8 _= clear skies:nk]' direction='ASC' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='106' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[Clipboard_20200130T161313].[none:0/8 _= clear skies:nk]' value='220' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[Clipboard_20200130T161313].[none:0/8 _= clear skies:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{BDD3FA7D-8602-4E00-B196-1C1E592735F6}' />
+    </worksheet>
+    <worksheet name='Dew Point C'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Weather_Madrid_clean' name='federated.042k2lc1vp6i8m1bc3k2i1o7a85r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.042k2lc1vp6i8m1bc3k2i1o7a85r'>
+            <column caption='Seasons' datatype='string' name='[Calculation_1054405277448695809]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ((MONTH([Date])=12) or (MONTH([Date])=1) or (MONTH([Date])=2)) THEN &quot;Winter&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=3) or (MONTH([Date])=4) or (MONTH([Date])=5)) THEN &quot;Spring&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=6) or (MONTH([Date])=7) or (MONTH([Date])=8)) THEN &quot;Summer&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=9) or (MONTH([Date])=10) or (MONTH([Date])=11)) THEN &quot;Fall&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Dew PointC]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Max Humidity]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Min Humidity]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Min TemperatureC]' role='measure' type='quantitative' />
+            <column-instance column='[Dew PointC]' derivation='Avg' name='[avg:Dew PointC:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Max Humidity]' derivation='Avg' name='[avg:Max Humidity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Min Humidity]' derivation='Avg' name='[avg:Min Humidity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Min TemperatureC]' derivation='Avg' name='[avg:Min TemperatureC:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1054405277448695809]' derivation='None' name='[none:Calculation_1054405277448695809:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Max Humidity]' derivation='Sum' name='[sum:Max Humidity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Min TemperatureC]' derivation='Sum' name='[sum:Min TemperatureC:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Max Humidity:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[sum:Min TemperatureC:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk]' scope='rows' value='Temperature (C)' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='false' />
+            <encoding attr='space' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]' scope='rows' value='true' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk]' scope='rows' value='true' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]' scope='rows' value='Avg. Humidity (%)' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Calculation_1054405277448695809:nk]' value='320' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk]' />
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='false' y-axis='true' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#00aaff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk]' />
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#72b966' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk]' />
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#00aaff' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk]' />
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#00aaff' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk]' />
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='false' y-axis='true' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#00aaff' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk] + ([federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk] + ([federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Dew PointC:qk] + [federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk])))</rows>
+        <cols>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Calculation_1054405277448695809:nk]</cols>
+      </table>
+      <simple-id uuid='{87225D81-71AE-4D16-86AC-8ECA07BDF2C8}' />
+    </worksheet>
+    <worksheet name='Humidity'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Weather_Madrid_clean' name='federated.042k2lc1vp6i8m1bc3k2i1o7a85r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.042k2lc1vp6i8m1bc3k2i1o7a85r'>
+            <column caption='Seasons' datatype='string' name='[Calculation_1054405277448695809]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ((MONTH([Date])=12) or (MONTH([Date])=1) or (MONTH([Date])=2)) THEN &quot;Winter&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=3) or (MONTH([Date])=4) or (MONTH([Date])=5)) THEN &quot;Spring&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=6) or (MONTH([Date])=7) or (MONTH([Date])=8)) THEN &quot;Summer&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=9) or (MONTH([Date])=10) or (MONTH([Date])=11)) THEN &quot;Fall&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Max Humidity]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Mean Humidity]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Min Humidity]' role='measure' type='quantitative' />
+            <column-instance column='[Max Humidity]' derivation='Avg' name='[avg:Max Humidity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mean Humidity]' derivation='Avg' name='[avg:Mean Humidity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Min Humidity]' derivation='Avg' name='[avg:Min Humidity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1054405277448695809]' derivation='None' name='[none:Calculation_1054405277448695809:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year-Trunc' name='[tyr:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean Humidity:qk]' scope='rows' value='Avg. Humidity (%)' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[yr:Date:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Calculation_1054405277448695809:nk]' value='280' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-size' scope='rows' value='1' />
+            <format attr='band-size' scope='cols' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Humidity:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean Humidity:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Humidity:qk]' />
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-markers-mode' value='auto' />
+                <format attr='size' value='3.3922650814056396' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-range-scope' value='table' />
+                <format attr='line-interpolation' value='step' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean Humidity:qk]</rows>
+        <cols>([federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Calculation_1054405277448695809:nk] * [federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[yr:Date:qk])</cols>
+        <pages>
+          <column>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tyr:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='false' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-periods='Year-Trunc' range-size='2' range-type='next' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{ABFED6E8-2866-4692-87BF-AF952CA3ED3A}' />
+    </worksheet>
+    <worksheet name='Pressure'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Weather_Madrid_clean' name='federated.042k2lc1vp6i8m1bc3k2i1o7a85r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.042k2lc1vp6i8m1bc3k2i1o7a85r'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Max Sea Level PressurehPa]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Min Sea Level PressurehPa]' role='measure' type='quantitative' />
+            <column-instance column='[Max Sea Level PressurehPa]' derivation='Avg' name='[avg:Max Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Min Sea Level PressurehPa]' derivation='Avg' name='[avg:Min Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Sea Level PressurehPa:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Sea Level PressurehPa:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Sea Level PressurehPa:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]</column>
+            <column>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Sea Level PressurehPa:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[Multiple Values]' scope='rows' value='Atmospheric pressure (mbar)' />
+            <encoding attr='space' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[Multiple Values]' field-type='quantitative' max='1035.0' min='1000.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Sea Level PressurehPa:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Sea Level PressurehPa:qk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='false' y-axis='true' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[Multiple Values]</rows>
+        <cols>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[yr:Date:ok]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[yr:Date:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[yr:Date:ok]</field>
+                  <field>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]</field>
+                  <field>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2012</value>
+                <value>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min Sea Level PressurehPa:qk]&quot;</value>
+                <value>1013.2857142857143</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{7537003F-FC0C-4FEE-99D4-930687ED1884}' />
+    </worksheet>
+    <worksheet name='Temp-Monthly'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Weather_Madrid_clean' name='federated.042k2lc1vp6i8m1bc3k2i1o7a85r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.042k2lc1vp6i8m1bc3k2i1o7a85r'>
+            <column caption='Seasons' datatype='string' name='[Calculation_1054405277448695809]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ((MONTH([Date])=12) or (MONTH([Date])=1) or (MONTH([Date])=2)) THEN &quot;Winter&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=3) or (MONTH([Date])=4) or (MONTH([Date])=5)) THEN &quot;Spring&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=6) or (MONTH([Date])=7) or (MONTH([Date])=8)) THEN &quot;Summer&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=9) or (MONTH([Date])=10) or (MONTH([Date])=11)) THEN &quot;Fall&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Max TemperatureC]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Mean Sea Level PressurehPa]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Min TemperatureC]' role='measure' type='quantitative' />
+            <column-instance column='[Max TemperatureC]' derivation='Avg' name='[avg:Max TemperatureC:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mean Sea Level PressurehPa]' derivation='Avg' name='[avg:Mean Sea Level PressurehPa:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Min TemperatureC]' derivation='Avg' name='[avg:Min TemperatureC:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month' name='[mn:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1054405277448695809]' derivation='None' name='[none:Calculation_1054405277448695809:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year-Trunc' name='[tyr:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tyr:Date:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]</column>
+            <column>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tyr:Date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='render-fold-reversed' value='false' />
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' scope='rows' value='Temperature (c)' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' scope='rows' value='true' />
+            <encoding attr='space' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='auto-subtitle' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='true' />
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='false' />
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' scope='rows' value='T (c)' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' scope='rows' value='true' />
+            <format attr='auto-subtitle' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='true' />
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='false' />
+            <format attr='auto-subtitle' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='true' />
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='false' />
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' scope='rows' value='T (c)' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' scope='rows' value='true' />
+            <format attr='auto-subtitle' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='true' />
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='false' />
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' scope='rows' value='T (c)' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' scope='rows' value='true' />
+            <format attr='auto-subtitle' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='true' />
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' scope='rows' value='false' />
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' scope='rows' value='T (c)' />
+            <format attr='display' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[mn:Date:ok]' value='86' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean Sea Level PressurehPa:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='false' y-axis='true' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Quarter of year:&#9;</run>
+                <run bold='true'>&lt;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tqr:Date:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Max Temperature C:&#9;</run>
+                <run bold='true'>&lt;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Min Temperature C:&#9;</run>
+                <run bold='true'>&lt;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='selection' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='129' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean Sea Level PressurehPa:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='false' y-axis='true' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Quarter of year:&#9;</run>
+                <run bold='true'>&lt;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[mn:Date:ok]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Max Temperature C:&#9;</run>
+                <run bold='true'>&lt;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Min Temperature C:&#9;</run>
+                <run bold='true'>&lt;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='selection' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='129' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean Sea Level PressurehPa:qk]' />
+              <tooltip column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='false' y-axis='true' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Quarter of year:&#9;</run>
+                <run bold='true'>&lt;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[mn:Date:ok]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Max Temperature C:&#9;</run>
+                <run bold='true'>&lt;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Min Temperature C:&#9;</run>
+                <run bold='true'>&lt;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='selection' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='129' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk] + [federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk])</rows>
+        <cols>([federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Calculation_1054405277448695809:nk] / [federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[mn:Date:ok])</cols>
+        <pages>
+          <column>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[yr:Date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+        <forecast-specification auto-forecast-agg='false' band-confidence-level='95.000000' enabled='false' fill-type='fill-missing' forecast-agg='Month-Trunc' ignore-last='1' model-type='auto-season' range-periods='Year-Trunc' range-size='1' range-type='next' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{22686C8E-89CD-4928-B474-FA2C9DACA36A}' />
+    </worksheet>
+    <worksheet name='Temp-Season'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Weather_Madrid_clean' name='federated.042k2lc1vp6i8m1bc3k2i1o7a85r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.042k2lc1vp6i8m1bc3k2i1o7a85r'>
+            <column caption='Seasons' datatype='string' name='[Calculation_1054405277448695809]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ((MONTH([Date])=12) or (MONTH([Date])=1) or (MONTH([Date])=2)) THEN &quot;Winter&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=3) or (MONTH([Date])=4) or (MONTH([Date])=5)) THEN &quot;Spring&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=6) or (MONTH([Date])=7) or (MONTH([Date])=8)) THEN &quot;Summer&quot;&#13;&#10;ELSEIF  ((MONTH([Date])=9) or (MONTH([Date])=10) or (MONTH([Date])=11)) THEN &quot;Fall&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Max TemperatureC]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Mean TemperatureC]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Min TemperatureC]' role='measure' type='quantitative' />
+            <column-instance column='[Max TemperatureC]' derivation='Avg' name='[avg:Max TemperatureC:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mean TemperatureC]' derivation='Avg' name='[avg:Mean TemperatureC:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Min TemperatureC]' derivation='Avg' name='[avg:Min TemperatureC:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1054405277448695809]' derivation='None' name='[none:Calculation_1054405277448695809:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean TemperatureC:qk]' scope='rows' value='Avg. Temperature (C)' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Calculation_1054405277448695809:nk]' value='320' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Calculation_1054405277448695809:nk]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max TemperatureC:qk]' />
+              <lod column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Min TemperatureC:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='mark-color' value='#f17b79' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean TemperatureC:qk]</rows>
+        <cols>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Calculation_1054405277448695809:nk]</cols>
+      </table>
+      <simple-id uuid='{19D23E20-FCE4-4186-9C94-C05ACCD170E3}' />
+    </worksheet>
+    <worksheet name='Wind speed Km/h'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Weather_Madrid_clean' name='federated.042k2lc1vp6i8m1bc3k2i1o7a85r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.042k2lc1vp6i8m1bc3k2i1o7a85r'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Max Wind SpeedKm/h]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Mean Wind SpeedKm/h]' role='measure' type='quantitative' />
+            <column-instance column='[Max Wind SpeedKm/h]' derivation='Avg' name='[avg:Max Wind SpeedKm/h:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mean Wind SpeedKm/h]' derivation='Avg' name='[avg:Mean Wind SpeedKm/h:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year-Trunc' name='[tyr:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Max Wind SpeedKm/h:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[avg:Mean Wind SpeedKm/h:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[Multiple Values]' scope='rows' value='Wind speed (km/h)' />
+            <format attr='title' class='0' field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tyr:Date:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[Multiple Values]</rows>
+        <cols>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[tyr:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{5095199C-EA79-478E-87A3-33D5DFD5D96E}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Cloud cover DB'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='26250' id='3' name='Cloud Cover Measures' w='22300' x='77100' y='16000' />
+        <zone h='99500' id='4' name='Cloud Cover' show-title='false' w='78000' x='-1200' y='-1375' />
+        <zone h='14500' id='5' name='Cloud Cover' synchronized='1' type='currpage' w='22100' x='77200' y='0' />
+        <zone h='59375' id='22' is-scaled='1' param='D:/Ironhack/Ironhack_Projects/Module02_tableau-project/your-code/Weather Madrid.twb Files/Image/Cloud_Cover.png' type='bitmap' w='23400' x='76700' y='40375' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='69' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='68' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='99500' id='4' is-fixed='true' name='Cloud Cover' show-title='false' w='78000' x='-1200' y='-1375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='210' h='26250' id='3' is-fixed='true' name='Cloud Cover Measures' w='22300' x='77100' y='16000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='59375' id='22' is-fixed='true' is-scaled='1' param='D:/Ironhack/Ironhack_Projects/Module02_tableau-project/your-code/Weather Madrid.twb Files/Image/Cloud_Cover.png' type='bitmap' w='23400' x='76700' y='40375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14500' id='5' name='Cloud Cover' synchronized='1' type='currpage' w='22100' x='77200' y='0'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D9196CEF-1EDC-4874-BA40-F44B564F9F0C}' />
+    </dashboard>
+    <dashboard name='Humidity_db'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='49000' id='80' is-scaled='1' param='D:/Ironhack/Ironhack_Projects/Module02_tableau-project/your-code/Weather Madrid.twb Files/Image/124329c4e3297415c3f8ad9795836168cbee5fa2.jfif' type='bitmap' w='87200' x='100' y='50750' />
+        <zone fixed-size='160' h='33250' id='103' is-fixed='true' param='vert' type='layout-flow' w='16000' x='81500' y='3125'>
+          <zone h='15625' id='105' name='Humidity' synchronized='1' type='currpage' w='16000' x='81500' y='3125'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='50875' id='100' name='Humidity' show-title='false' w='81600' x='0' y='125' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='133' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='132' param='vert' type='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='50875' id='100' is-fixed='true' name='Humidity' show-title='false' w='81600' x='0' y='125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='80' is-fixed='true' is-scaled='1' param='D:/Ironhack/Ironhack_Projects/Module02_tableau-project/your-code/Weather Madrid.twb Files/Image/124329c4e3297415c3f8ad9795836168cbee5fa2.jfif' type='bitmap' w='87200' x='100' y='50750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='15625' id='105' name='Humidity' synchronized='1' type='currpage' w='16000' x='81500' y='3125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F2697C3A-5BBA-417B-A792-B271CC16DF58}' />
+    </dashboard>
+    <dashboard name='Weather Madrid' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Benton Sans Book'>Weather in Madrid 1997-2015</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='story-description'>
+          <format attr='text-decoration' id='story-description_14' value='none' />
+          <format attr='text-decoration' id='story-description_21' value='none' />
+        </style-rule>
+        <style-rule element='story-point-caption'>
+          <format attr='width' value='206' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' preset-index='8' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='19' param='vert' removable='false' type='layout-flow' w='99000' x='500' y='889'>
+            <zone h='6556' id='20' type='title' w='99000' x='500' y='889'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='91666' id='17' param='vert' removable='false' type='layout-flow' w='99000' x='500' y='7445'>
+              <zone h='91666' id='12' param='vert' removable='false' type='layout-flow' w='99000' x='500' y='7445'>
+                <zone h='91666' id='10' param='vert' removable='false' type='layout-flow' w='99000' x='500' y='7445'>
+                  <zone h='91666' id='1' param='vert' removable='false' type='layout-flow' w='99000' x='500' y='7445'>
+                    <zone h='11222' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='99000' x='500' y='7445' />
+                    <zone h='80444' id='5' paired-zone-id='4' removable='false' type='flipboard' w='99000' x='500' y='18667'>
+                      <flipboard active-id='7' nav-type='caption' show-nav-arrows='true'>
+                        <story-points>
+                          <story-point caption='Temperature/Season' captured-sheet='Temp-Season' id='7' />
+                          <story-point caption='Temperature/Month' captured-sheet='Temp-Monthly' id='1'>
+                            <capturedDeltas>
+                              <worksheet name='Temp-Monthly'>
+                                <highlight field='[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]&#10;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Forecast Indicator:nk]'>
+                                  <color-one-way>
+                                    <field>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[:Measure Names]</field>
+                                    <field>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[none:Forecast Indicator:nk]</field>
+                                    <field>[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[yr:Date:ok]</field>
+                                  </color-one-way>
+                                  <bucket-selection>
+                                    <multibucket>
+                                      <bucket>&quot;[federated.042k2lc1vp6i8m1bc3k2i1o7a85r].[fVal:avg:Max TemperatureC:qk]&quot;</bucket>
+                                      <bucket>&quot;Actual&quot;</bucket>
+                                    </multibucket>
+                                  </bucket-selection>
+                                </highlight>
+                              </worksheet>
+                            </capturedDeltas>
+                          </story-point>
+                          <story-point caption='Humidity (%)' captured-sheet='Humidity_db' id='2' />
+                          <story-point caption='Dew Point C' captured-sheet='Dew Point C' id='4' />
+                          <story-point caption='Pressure (mbar)' captured-sheet='Pressure' id='3'>
+                            <capturedDeltas>
+                              <worksheet name='Pressure'>
+                                <selection-collection />
+                              </worksheet>
+                            </capturedDeltas>
+                          </story-point>
+                          <story-point caption='Wind speed (km/h)' captured-sheet='Wind db' id='5' />
+                          <story-point caption='Cloud Cover' captured-sheet='Cloud cover DB' id='6' />
+                        </story-points>
+                      </flipboard>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='6444' hidden='true' id='8' story-point-id='3' type='text' w='45563' x='7688' y='17444'>
+          <formatted-text>
+            <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='10'>Average </run>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='10'>sea</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='10'>-</run>
+            <run bold='true' fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='10'>level pressure</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='10'> is 1013.25 mbar (101.325 kPa; 29.921 inHg; 760.00 mmHg).</run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='10'>for my eyes only :P</run>
+            <run fontalignment='0'>Æ&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='10'>the pressure of all the air above our heads is the force that pushes air into our lungs and squeezes oxygen out of it and into our bloodstream.</run>
+            <run fontalignment='0'>Æ&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='10'>we generally associate high pressure with fair weather and low pressure with unsettled weather.</run>
+            <run fontalignment='0'>Æ&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='10'>High pressure systems are “domes of density” that press down, while low pressure systems are akin to “atmospheric valleys” where the density of the air is less.  Since cool air has less of a capacity to hold water vapor as opposed to warm air, clouds and precipitation are caused by cooling the air. </run>
+            <run fontalignment='0'>Æ&#10;&#10;</run>
+            <run auto-url='true' fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book' fontsize='10' hyperlink='tabdoc:load-url url=&amp;quot;https://www.livescience.com/39315-atmospheric-pressure.html&amp;quot;'>https://www.livescience.com/39315-atmospheric-pressure.html</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid='{35A00268-AC36-48D3-87D1-A706FF485901}' />
+    </dashboard>
+    <dashboard name='Wind db'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='34500' id='21' is-scaled='1' param='D:/Ironhack/Ironhack_Projects/Module02_tableau-project/your-code/Weather Madrid.twb Files/Image/Map_prevailing_winds_on_earth.png' type='bitmap' w='99800' x='100' y='21125' />
+        <zone h='100250' id='4' name='Wind speed Km/h' show-title='false' w='99700' x='-300' y='-625' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='63' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='62' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='100250' id='4' is-fixed='true' name='Wind speed Km/h' show-title='false' w='99700' x='-300' y='-625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='276' h='34500' id='21' is-fixed='true' is-scaled='1' param='D:/Ironhack/Ironhack_Projects/Module02_tableau-project/your-code/Weather Madrid.twb Files/Image/Map_prevailing_winds_on_earth.png' type='bitmap' w='99800' x='100' y='21125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6EF67160-0C42-45A7-BEB8-3FA3FE8A1C0B}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='75'>
+    <window class='worksheet' name='Temp-Season'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='36'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CFDCDFA7-A8B1-4F86-AB1B-C22DB1E84E56}' />
+    </window>
+    <window class='worksheet' name='Temp-Monthly'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='35'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='118'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>1997</bucket>
+          </multibucket>
+        </current-page>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{BFE41EAC-F5F6-49BC-A54E-9913695C1990}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Humidity'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='102'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#1997-01-01 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <floating-toolbar-visibility value='1' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{7387ED0C-7FC5-4051-9E80-AF5EA64AD545}' />
+    </window>
+    <window class='dashboard' name='Humidity_db'>
+      <viewpoints>
+        <viewpoint name='Humidity'>
+          <current-page>
+            <multibucket>
+              <bucket>#1997-01-01 00:00:00#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{2FCC019A-3C6D-412C-BAED-09433EDC1F39}' />
+    </window>
+    <window class='worksheet' name='Dew Point C'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FDE9A150-CA85-4744-9EEC-F14F0B04B4BA}' />
+    </window>
+    <window class='worksheet' name='Pressure'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A585243F-9D63-47B8-9216-4657280050BF}' />
+    </window>
+    <window class='worksheet' name='Wind speed Km/h'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{771FD590-ADFA-422B-9830-10DD9CC1DE35}' />
+    </window>
+    <window class='dashboard' name='Wind db'>
+      <viewpoints>
+        <viewpoint name='Wind speed Km/h'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{178AE5F8-3345-4F27-89F9-027732EEEE0B}' />
+    </window>
+    <window class='worksheet' name='Cloud Cover'>
+      <cards>
+        <edge name='left'>
+          <strip size='170'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='106'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#1997-01-01 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{6503B50E-9088-4CBF-873A-99E985091E43}' />
+    </window>
+    <window class='worksheet' name='Cloud Cover Measures'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{40F7DA6F-EF88-4EE7-8858-2CD9FADA3739}' />
+    </window>
+    <window class='dashboard' name='Cloud cover DB'>
+      <viewpoints>
+        <viewpoint name='Cloud Cover'>
+          <current-page>
+            <multibucket>
+              <bucket>#1997-01-01 00:00:00#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Cloud Cover Measures' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{D1E7AE14-72B9-41A4-976A-20872E7F6A04}' />
+    </window>
+    <window class='dashboard' name='Weather Madrid'>
+      <viewpoints />
+      <active id='4' />
+      <simple-id uuid='{976CEF07-948D-4C9B-A5A5-0B8134E00140}' />
+    </window>
+  </windows>
+</workbook>
