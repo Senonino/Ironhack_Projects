@@ -7,7 +7,6 @@
 
 ## Content
 - [Project Description](#project-description)
-- [Questions & Hypotheses](#Questions & Hypotheses)
 - [Dataset](#dataset)
 - [Workflow](#workflow)
 - [Organization](#organization)
@@ -19,10 +18,6 @@ Due to Madrid's high altitude of 650 metres, it experiences quite different temp
 September is a pleasant month, with temperatures back down to around 25 degrees Celsius. October is also still fairly warm with an average daytime temperature of 20 degrees Celsius.
 The weather in Madrid is predominantly dry, but that doesn't mean that rain can be ruled out. Especially in the winter months.
 In this project a detailed study to different aspects of weather in Madrid were studied and expressive charts were made. The relationship between the different parameters and how they affect the weather is explained.
-
-
-## Questions & Hypotheses
-As written before, an overview of the weather in Madrid between 1997 and 2015 will be shown with the help of expressive charts. The realationshi between the different paramaeters will be explained and in some cases a predictive chart of 2016 might be generated based on the historical data being processed.
 
 
 ## Dataset
