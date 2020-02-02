@@ -7,8 +7,8 @@
 
 ## Content
 - [Project Description](#project-description)
+- [Questions & Hypotheses](#Questions & Hypotheses)
 - [Dataset](#dataset)
-- [Database](#database)
 - [Workflow](#workflow)
 - [Organization](#organization)
 - [Links](#links)
@@ -68,9 +68,6 @@ exported as "Weather_Madrid_clean" after cleaning
 ## Links
 
 [Repository](https://github.com/valsophie/group_project-)
-
-
-## Helpful links
 
 ** https://www.goblueox.com/blog/what-is-humidity-and-why-does-it-matter/
 ** https://www.livescience.com/43269-what-is-dew-point.html
