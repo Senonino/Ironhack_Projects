@@ -62,7 +62,7 @@ exported as "Weather_Madrid_clean" after cleaning
 ## Links
 
 [Repository](https://github.com/Senonino/Ironhack_projects/tree/master/Module02_tableau-project)
-[Tableau](https://public.tableau.com/profile/senan.jadeed#!/vizhome/WeatherMadrid/Temp-Season)
+[Tableau](https://public.tableau.com/profile/senan.jadeed#!/vizhome/WeatherMadrid/WeatherMadrid)
 
 ** https://www.goblueox.com/blog/what-is-humidity-and-why-does-it-matter/
 ** https://www.livescience.com/43269-what-is-dew-point.html
